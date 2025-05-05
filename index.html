@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моє портфоліо</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('images/background.jpg'); /* Замінити на свою картинку */
+            background-size: cover;
+            background-position: center;
+        }
+        .container {
+            max-width: 960px;
+            margin: auto;
+            background-color: rgba(255,255,255,0.9);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        header, footer {
+            text-align: center;
+        }
+        .my-photo {
+            max-width: 150px;
+            border-radius: 50%;
+        }
+        .tags button {
+            margin: 5px;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #eee;
+            cursor: pointer;
+        }
+        .work {
+            display: inline-block;
+            margin: 10px;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <header>
+        <img src="images/myphoto.jpg" alt="Моє фото" class="my-photo">
+        <h1>Ім'я Прізвище</h1>
+        <p>Email: your.email@example.com | Тел: +380 XX XXX XXXX</p>
+    </header>
+
+    <section>
+        <h2>Про мене</h2>
+        <p>Короткий текст про тебе, ким ти є, що робиш.</p>
+    </section>
+
+    <section>
+        <h2>Освіта</h2>
+        <ul>
+            <li>Навчання у XYZ університеті</li>
+            <li>Курси/сертифікати</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Роботи</h2>
+        <div class="tags">
+            <button onclick="filterWorks('усе')">Усе</button>
+            <button onclick="filterWorks('фентезі')">Фентезі</button>
+            <button onclick="filterWorks('піксельарт')">Піксель Арт</button>
+        </div>
+        <div id="works">
+            <div class="work" data-tags="фентезі">
+                <img src="images/art1.jpg" width="200" alt="art1">
+                <p>2D Арт (фентезі)</p>
+            </div>
+            <div class="work" data-tags="піксельарт">
+                <img src="images/art2.jpg" width="200" alt="art2">
+                <p>2D Арт (піксель арт)</p>
+            </div>
+            <!-- додай свої роботи аналогічно -->
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Ім'я Прізвище</p>
+    </footer>
+</div>
+
+<script>
+    function filterWorks(tag) {
+        const works = document.querySelectorAll('.work');
+        works.forEach(work => {
+            if (tag === 'усе' || work.dataset.tags.includes(tag)) {
+                work.classList.remove('hidden');
+            } else {
+                work.classList.add('hidden');
+            }
+        });
+    }
+</script>
+</body>
+</html>
