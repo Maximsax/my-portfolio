@@ -23,6 +23,7 @@ body {
     width: 500px;
     height: 250px;
     z-index: -10;
+    opacity: 0%;
     margin-top: 700px;  /* Зсуває зображення вниз на 10px */
 }
 
