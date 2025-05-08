@@ -21,10 +21,19 @@ body {
 
 .main > .content img {
     width: 500px;
-    height: 250px;
+    height: 220px;
     z-index: -10;
-    opacity: 0%;
+    opacity: 100%;
+    margin-right: 700px;
     margin-top: 700px;  /* Зсуває зображення вниз на 10px */
+}
+.main > .ff img{
+    width: 500px;
+    height: 220px;
+    z-index: -10;
+    opacity: 100%;
+    margin-left: 900px;
+    margin-top: 100px;
 }
 
 /* Вертикальні смуги */
@@ -79,6 +88,7 @@ body::after {
     color: #1f1f1f;
     font-family: sans-serif;
 }
+
 
 .Knowledge-block {
     position: absolute;
@@ -154,3 +164,5 @@ body::after {
 .contacts a:hover {
     color: #131313; /* Темніший колір при наведенні */
 }
+
+
