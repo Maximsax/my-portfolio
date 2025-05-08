@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    position: relative;
+}
+
+.main {
+    width: 100%;
+    height: 300vh;
+    background-color: #ffffff;
+}
+
+.content {
+    text-align: center;
+    position: relative;
+    top: 1%;
+}
+
+.main > .content img {
+    width: 1000px;
+    height: 100px;
+}
+
+/* Вертикальні смуги */
+body::before,
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    width: 200px;
+    height: 100%;
+    background-color: rgb(226, 218, 219);
+    z-index: 999;
+}
+
+body::before {
+    left: 0;
+}
+
+body::after {
+    right: 0;
+}
+
+.Knowledge-block {
+    position: absolute;
+    top: 11%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: left; /* Вирівнювання тексту по лівому краю */
+    color: #1f1f1f;
+    font-family: sans-serif;
+}
+
+.highlighted-line {
+    background-color: rgb(162, 167, 165);
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.info-list, .contacts {
+    list-style-type: disc; /* Класичні маркери */
+    padding-left: 20px; /* Відступ для маркерів */
+    margin: 10px 0;
+}
+
+.contacts li {
+    margin-bottom: 5px;
+}
+
+.contacts a {
+    text-decoration: none;
+    color: #1f1f1f;
+}
+
+/* Блок з інформацією */
+.info-block {
+    position: absolute;
+    top: 16%; /* Відстань від верхнього краю */
+    left: 15%; /* Відстань від лівого краю */
+    transform: translateY(-50%); /* Вирівнює блок по вертикалі */
+    background-color: rgb(162, 167, 165); /* Трохи прозорий фон */
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px; /* Ширина блоку */
+    text-align: center; /* Вирівнювання тексту по центру */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Легка тінь для кращого вигляду */
+    color: #1f1f1f;
+}
+
+.info-photo {
+    width: 100px; /* Розмір фотографії */
+    height: 150px;
+    border-radius: 10%; /* Кругла форма */
+    margin-bottom: 30px; /* Відстань між фото та текстом */
+}
+
+.info-block h2 {
+    margin-bottom: 10px; /* Відстань між ім'ям і текстом */
+    font-size: 1.5em; /* Розмір шрифта */
+}
+
+.contacts a {
+    display: block; /* Кожне посилання на новому рядку */
+    text-decoration: none; /* Без підкреслення */
+    color: #6d696a; /* Колір посилань */
+    margin: 5px 0; /* Відстань між посиланнями */
+}
+
+.contacts a:hover {
+    color: #6d696a; /* Темніший колір при наведенні */
+}

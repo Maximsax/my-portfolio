@@ -1,107 +1,43 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="uk" xmlns:https="http://www.w3.org/1999/xhtml">
 <head>
+    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title></title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-image: url('images/d.png'); /* Твій шлях */
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-        .container {
-            max-width: 960px;
-            margin: auto;
-            background-color: rgba(255,255,255,0.6);
-            padding: 20px;
-            border-radius: 10px;
-        }
-        header, footer {
-            text-align: center;
-        }
-        .my-photo {
-            max-width: 150px;
-            border-radius: 50%;
-        }
-        .tags button {
-            margin: 5px;
-            padding: 5px 10px;
-            border: none;
-            border-radius: 5px;
-            background-color: #eee;
-            cursor: pointer;
-        }
-        .work {
-            display: inline-block;
-            margin: 10px;
-            border: 1px solid #ccc;
-            padding: 10px;
-        }
-        .hidden {
-            display: none;
-        }
-    </style>
+    <title>Portfolio</title>
 </head>
 <body>
-<div class="container">
-    <header>
-        <img src="images/myphoto.jpg" alt="Моє фото" class="my-photo">
-        <h1>Ім'я Прізвище</h1>
-        <p>Email: your.email@example.com | Тел: +380 XX XXX XXXX</p>
-    </header>
+<div class="main">
+    <div class="content">
+        <img src="images/Back.png" alt="Background Image">
+    </div>
 
-    <section>
-        <h2>Про мене</h2>
-        <p>Короткий текст про тебе, ким ти є, що робиш.</p>
-    </section>
+    <!-- Блок для зображення, імені, тексту та контактів -->
+    <div class="info-block">
+        <img src="images/me.jpg" alt="Моє фото" class="info-photo">
+        <h2>Max Havaza</h2>
+        <p>Game Dev</p>
+        <p>Programmer</p>
+        <p>Game Design</p>
+        <div class="contacts">
+            <a href="myltimaxplayer@gmail.com">Email: myltimaxplayer@gmail.com</a>
+            <a href="tel:+380XXXXXXXXX">Telegram: myltiy</a>
+            <a href="https://www.instagram.com/brokeylti/?hl=en>">Instagram: brokeylti</a>
+        </div>
+    </div>
 
-    <section>
-        <h2>Освіта</h2>
-        <ul>
-            <li>Навчання у XYZ університеті</li>
-            <li>Курси/сертифікати</li>
+    <div class="Knowledge-block">
+        <div class="highlighted-line">Education</div>
+        <ul class="contacts">
+           <li> <a href="images/Course.pdf" target="_blank">2019-2021 Game Dev Course</a> </li>
         </ul>
-    </section>
+        <ul class="info-list">
+            <li>2023-2025 Technical University in Košice, FEI, Informatics (Slovakia), still studying for a bachelor's degree</li>
+            <li>2021-2023 Admiral Makarov College,Computer Science(Ukraine)</li>
+        </ul>
 
-    <section>
-        <h2>Роботи</h2>
-        <div class="tags">
-            <button onclick="filterWorks('усе')">Усе</button>
-            <button onclick="filterWorks('фентезі')">Фентезі</button>
-            <button onclick="filterWorks('піксельарт')">Піксель Арт</button>
-        </div>
-        <div id="works">
-            <div class="work" data-tags="фентезі">
-                <img src="images/art1.jpg" width="200" alt="art1">
-                <p>2D Арт (фентезі)</p>
-            </div>
-            <div class="work" data-tags="піксельарт">
-                <img src="images/art2.jpg" width="200" alt="art2">
-                <p>2D Арт (піксель арт)</p>
-            </div>
-            <!-- додай свої роботи аналогічно -->
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 Ім'я Прізвище</p>
-    </footer>
+    </div>
 </div>
 
-<script>
-    function filterWorks(tag) {
-        const works = document.querySelectorAll('.work');
-        works.forEach(work => {
-            if (tag === 'усе' || work.dataset.tags.includes(tag)) {
-                work.classList.remove('hidden');
-            } else {
-                work.classList.add('hidden');
-            }
-        });
-    }
-</script>
 </body>
 </html>
