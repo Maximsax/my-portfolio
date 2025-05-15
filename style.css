@@ -130,7 +130,7 @@ body::after {
 /* Блок з інформацією */
 .info-block {
     position: absolute;
-    top: 16%; /* Відстань від верхнього краю */
+    top: 17%; /* Відстань від верхнього краю */
     left: 15%; /* Відстань від лівого краю */
     transform: translateY(-50%); /* Вирівнює блок по вертикалі */
     background-color: rgb(162, 167, 165); /* Трохи прозорий фон */
@@ -171,6 +171,34 @@ body::after {
     top: 700px;         /* відступ зверху */
     left: 700px;         /* відступ зліва */
     z-index: 10;        /* щоб не ховалась за іншими елементами */
+}
+.top-nav {
+    background-color: #222;
+    padding: 10px;
+    text-align: center;
+}
+.top-nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-family: sans-serif;
+    font-size: 18px;
+}
+.top-nav a:hover {
+    text-decoration: underline;
+}
+
+
+.mainGames {
+    text-align: center;
+}
+.info-listGames {
+    list-style-position: outside;
+    padding-left: 1.5em; /* або % — для адаптивності */
+    margin-left: 15%;   /* Зсуває вправо на 10% ширини екрану */
+    margin-top: 5%;     /* Зсуває вниз на 5% висоти батьківського елемента */
+    font-size: 1.2rem;
+    text-align: left;
 }
 
 
