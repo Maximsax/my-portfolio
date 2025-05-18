@@ -196,9 +196,28 @@ body::after {
     list-style-position: outside;
     padding-left: 1.5em; /* або % — для адаптивності */
     margin-left: 15%;   /* Зсуває вправо на 10% ширини екрану */
-    margin-top: 5%;     /* Зсуває вниз на 5% висоти батьківського елемента */
+    margin-top: 1%;     /* Зсуває вниз на 5% висоти батьківського елемента */
     font-size: 1.2rem;
     text-align: left;
 }
+
+.gif-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* дозволяє переносити на наступний рядок при потребі */
+    padding: 0 15%; /* відступи зліва та справа */
+    box-sizing: border-box;
+    gap: 2px; /* відстань між гіфками */
+}
+
+.gif-Menu,
+.gif-Gameplay {
+    width: 100%;
+    max-width: 500px; /* максимальна ширина гіфки */
+    height: auto;
+    flex: 1 1 300px; /* адаптивне розширення */
+}
+
 
 
