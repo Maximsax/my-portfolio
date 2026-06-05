@@ -189,35 +189,30 @@ body::after {
 }
 
 
-.mainGames {
-    text-align: center;
-}
+
 .info-listGames {
-    list-style-position: outside;
-    padding-left: 1.5em; /* або % — для адаптивності */
-    margin-left: 15%;   /* Зсуває вправо на 10% ширини екрану */
-    margin-top: 1%;     /* Зсуває вниз на 5% висоти батьківського елемента */
+    max-width: 90ch;
+    margin: 1rem auto;
     font-size: 1.2rem;
+    line-height: 1.6;
     text-align: left;
+    padding: 0 1rem;
 }
 
 .gif-row {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap; /* дозволяє переносити на наступний рядок при потребі */
-    padding: 0 15%; /* відступи зліва та справа */
-    box-sizing: border-box;
-    gap: 2px; /* відстань між гіфками */
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.gif-Menu,
-.gif-Gameplay {
-    width: 100%;
-    max-width: 500px; /* максимальна ширина гіфки */
+.gif-row img {
+    width: clamp(20rem, 18vw, 140rem);
     height: auto;
-    flex: 1 1 300px; /* адаптивне розширення */
+    object-fit: cover;
+    border-radius: 0.5rem;
 }
+
 .mainProgramming {
     text-align: center;
 }
