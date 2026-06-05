@@ -198,6 +198,11 @@ body::after {
     text-align: left;
     padding: 0 1rem;
 }
+.project {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
 
 .gif-row {
     display: flex;
